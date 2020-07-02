@@ -3,27 +3,43 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		E4EFC55B24AC968D00B78D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC55A24AC968D00B78D12 /* AppDelegate.swift */; };
 		E4EFC55D24AC968D00B78D12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC55C24AC968D00B78D12 /* SceneDelegate.swift */; };
-		E4EFC55F24AC968D00B78D12 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC55E24AC968D00B78D12 /* ViewController.swift */; };
+		E4EFC55F24AC968D00B78D12 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC55E24AC968D00B78D12 /* UserListViewController.swift */; };
 		E4EFC56224AC968D00B78D12 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EFC56024AC968D00B78D12 /* Main.storyboard */; };
 		E4EFC56424AC968E00B78D12 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4EFC56324AC968E00B78D12 /* Assets.xcassets */; };
 		E4EFC56724AC968E00B78D12 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4EFC56524AC968E00B78D12 /* LaunchScreen.storyboard */; };
+		E4EFC57424AD75C600B78D12 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC57324AD75C600B78D12 /* UserCell.swift */; };
+		E4EFC57624AD7C1B00B78D12 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC57524AD7C1B00B78D12 /* LoadingViewController.swift */; };
+		E4EFC57824AD7E7100B78D12 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC57724AD7E7100B78D12 /* User.swift */; };
+		E4EFC57B24AD827400B78D12 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E4EFC57A24AD827400B78D12 /* Kingfisher */; };
+		E4EFC57E24AD82A400B78D12 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4EFC57D24AD82A400B78D12 /* Alamofire */; };
+		E4EFC58124AD82CC00B78D12 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC58024AD82CC00B78D12 /* APIService.swift */; };
+		E4EFC58324AD831200B78D12 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC58224AD831200B78D12 /* Constant.swift */; };
+		E4EFC58524AD840900B78D12 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC58424AD840900B78D12 /* UserViewModel.swift */; };
+		E4EFC58724AD844A00B78D12 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC58624AD844A00B78D12 /* UserService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E4EFC55724AC968D00B78D12 /* GitHubUserListExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubUserListExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EFC55A24AC968D00B78D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4EFC55C24AC968D00B78D12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E4EFC55E24AC968D00B78D12 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E4EFC55E24AC968D00B78D12 /* UserListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		E4EFC56124AC968D00B78D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4EFC56324AC968E00B78D12 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4EFC56624AC968E00B78D12 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4EFC56824AC968E00B78D12 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4EFC57324AD75C600B78D12 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		E4EFC57524AD7C1B00B78D12 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		E4EFC57724AD7E7100B78D12 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		E4EFC58024AD82CC00B78D12 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		E4EFC58224AD831200B78D12 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		E4EFC58424AD840900B78D12 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		E4EFC58624AD844A00B78D12 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +47,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4EFC57B24AD827400B78D12 /* Kingfisher in Frameworks */,
+				E4EFC57E24AD82A400B78D12 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +76,68 @@
 			children = (
 				E4EFC55A24AC968D00B78D12 /* AppDelegate.swift */,
 				E4EFC55C24AC968D00B78D12 /* SceneDelegate.swift */,
-				E4EFC55E24AC968D00B78D12 /* ViewController.swift */,
-				E4EFC56024AC968D00B78D12 /* Main.storyboard */,
+				E4EFC57224AD75AF00B78D12 /* Cell */,
+				E4EFC57F24AD82B400B78D12 /* Service */,
+				E4EFC57124AD750800B78D12 /* Model */,
+				E4EFC57024AD74FC00B78D12 /* ViewModel */,
+				E4EFC56F24AD74E700B78D12 /* Controller */,
+				E4EFC56E24AD74C700B78D12 /* View */,
 				E4EFC56324AC968E00B78D12 /* Assets.xcassets */,
-				E4EFC56524AC968E00B78D12 /* LaunchScreen.storyboard */,
 				E4EFC56824AC968E00B78D12 /* Info.plist */,
+				E4EFC58224AD831200B78D12 /* Constant.swift */,
 			);
 			path = GitHubUserListExample;
+			sourceTree = "<group>";
+		};
+		E4EFC56E24AD74C700B78D12 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4EFC56024AC968D00B78D12 /* Main.storyboard */,
+				E4EFC56524AC968E00B78D12 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4EFC56F24AD74E700B78D12 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E4EFC55E24AC968D00B78D12 /* UserListViewController.swift */,
+				E4EFC57524AD7C1B00B78D12 /* LoadingViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E4EFC57024AD74FC00B78D12 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4EFC58424AD840900B78D12 /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E4EFC57124AD750800B78D12 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4EFC57724AD7E7100B78D12 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4EFC57224AD75AF00B78D12 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E4EFC57324AD75C600B78D12 /* UserCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E4EFC57F24AD82B400B78D12 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E4EFC58024AD82CC00B78D12 /* APIService.swift */,
+				E4EFC58624AD844A00B78D12 /* UserService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +156,10 @@
 			dependencies = (
 			);
 			name = GitHubUserListExample;
+			packageProductDependencies = (
+				E4EFC57A24AD827400B78D12 /* Kingfisher */,
+				E4EFC57D24AD82A400B78D12 /* Alamofire */,
+			);
 			productName = GitHubUserListExample;
 			productReference = E4EFC55724AC968D00B78D12 /* GitHubUserListExample.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +188,10 @@
 				Base,
 			);
 			mainGroup = E4EFC54E24AC968D00B78D12;
+			packageReferences = (
+				E4EFC57924AD827400B78D12 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				E4EFC57C24AD82A400B78D12 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = E4EFC55824AC968D00B78D12 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +219,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4EFC55F24AC968D00B78D12 /* ViewController.swift in Sources */,
+				E4EFC57424AD75C600B78D12 /* UserCell.swift in Sources */,
+				E4EFC58124AD82CC00B78D12 /* APIService.swift in Sources */,
+				E4EFC55F24AC968D00B78D12 /* UserListViewController.swift in Sources */,
+				E4EFC58324AD831200B78D12 /* Constant.swift in Sources */,
+				E4EFC57824AD7E7100B78D12 /* User.swift in Sources */,
+				E4EFC57624AD7C1B00B78D12 /* LoadingViewController.swift in Sources */,
+				E4EFC58724AD844A00B78D12 /* UserService.swift in Sources */,
 				E4EFC55B24AC968D00B78D12 /* AppDelegate.swift in Sources */,
+				E4EFC58524AD840900B78D12 /* UserViewModel.swift in Sources */,
 				E4EFC55D24AC968D00B78D12 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,7 +379,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.pinlun.GitHubUserListExample;
+				PRODUCT_BUNDLE_IDENTIFIER = me.pinlun.githubUserListExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -309,7 +397,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = me.pinlun.GitHubUserListExample;
+				PRODUCT_BUNDLE_IDENTIFIER = me.pinlun.githubUserListExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -338,6 +426,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4EFC57924AD827400B78D12 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.14.0;
+			};
+		};
+		E4EFC57C24AD82A400B78D12 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4EFC57A24AD827400B78D12 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4EFC57924AD827400B78D12 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		E4EFC57D24AD82A400B78D12 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4EFC57C24AD82A400B78D12 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4EFC54F24AC968D00B78D12 /* Project object */;
 }
