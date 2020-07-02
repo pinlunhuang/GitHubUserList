@@ -15,6 +15,11 @@ Pre-requisites
 - Xcode 11+
 - iOS 13+ Device
 
+Swift Package
+--------------
+- Alamofire: https://github.com/Alamofire/Alamofire
+- Kingfisher: https://github.com/onevcat/Kingfisher
+
 Screenshots
 -------------
 
