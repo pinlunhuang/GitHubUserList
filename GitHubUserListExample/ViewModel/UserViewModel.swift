@@ -20,7 +20,7 @@ class UserViewModel: NSObject {
     var delegate: UserViewModelDelegate?
     var dataSource = [User]()
     
-    func fetchData() {
+    func requestUserData() {
         
         UserService.instance.getUserList(completion: { (users) in
             

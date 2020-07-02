@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class UserCell: UITableViewCell {
     
@@ -28,7 +29,9 @@ class UserCell: UITableViewCell {
     
     func configAdminLabel(){
         adminLbl.backgroundColor = #colorLiteral(red: 0.3685780466, green: 0.4235700369, blue: 0.8234271407, alpha: 1)
-        adminLbl.layer.cornerRadius = 5
+        adminLbl.textColor = UIColor.white
+        adminLbl.layer.masksToBounds = true
+        adminLbl.layer.cornerRadius = 15
     }
     
     func configRoundAvatar(){
@@ -37,6 +40,14 @@ class UserCell: UITableViewCell {
         avatarImg.layer.borderColor = UIColor.white.cgColor
         avatarImg.layer.cornerRadius = avatarImg.frame.size.width / 2
         avatarImg.clipsToBounds = true
+    }
+    
+    func configUser(user: User) {
+        loginLbl.text = user.login
+        adminLbl.text = user.siteAdmin! ? "ADMIN":"STAFF"
+        
+        let imageUrl = URL(string: user.avatarUrl!)
+        avatarImg.kf.setImage(with: imageUrl)
     }
 
 }

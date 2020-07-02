@@ -11,7 +11,6 @@ import Alamofire
 
 typealias completionHandler = (Data?,NetworkError) -> Void
 
-
 enum NetworkError: Error {
     case warning
     case failure
@@ -21,7 +20,7 @@ enum NetworkError: Error {
 class ApiService: NSObject {
     static let instance = ApiService()
     
-    func get(url:String,completion:@escaping completionHandler) {
+    func get(url: String,completion: @escaping completionHandler) {
         
         let url = api_url + url
         let params: Parameters = [:]
