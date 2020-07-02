@@ -22,6 +22,7 @@
 		E4EFC58324AD831200B78D12 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC58224AD831200B78D12 /* Constant.swift */; };
 		E4EFC58524AD840900B78D12 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC58424AD840900B78D12 /* UserViewModel.swift */; };
 		E4EFC58724AD844A00B78D12 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC58624AD844A00B78D12 /* UserService.swift */; };
+		E4EFC58924AD859C00B78D12 /* UserCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC58824AD859C00B78D12 /* UserCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		E4EFC58224AD831200B78D12 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		E4EFC58424AD840900B78D12 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		E4EFC58624AD844A00B78D12 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		E4EFC58824AD859C00B78D12 /* UserCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				E4EFC57724AD7E7100B78D12 /* User.swift */,
+				E4EFC58824AD859C00B78D12 /* UserCodable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				E4EFC57424AD75C600B78D12 /* UserCell.swift in Sources */,
 				E4EFC58124AD82CC00B78D12 /* APIService.swift in Sources */,
 				E4EFC55F24AC968D00B78D12 /* UserListViewController.swift in Sources */,
+				E4EFC58924AD859C00B78D12 /* UserCodable.swift in Sources */,
 				E4EFC58324AD831200B78D12 /* Constant.swift in Sources */,
 				E4EFC57824AD7E7100B78D12 /* User.swift in Sources */,
 				E4EFC57624AD7C1B00B78D12 /* LoadingViewController.swift in Sources */,

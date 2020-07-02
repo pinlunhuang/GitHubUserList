@@ -9,19 +9,43 @@
 import Foundation
 
 struct User: Codable {
-  let login: String
-  let id: Int
-  let avatarURL: String
-  let htmlURL: String
-  let type: String
-  let siteAdmin: Bool
+  var avatarUrl : String?
+  var eventsUrl : String?
+  var followersUrl : String?
+  var followingUrl : String?
+  var gistsUrl : String?
+  var gravatarId : String?
+  var htmlUrl : String?
+  var id : Int?
+  var login : String?
+  var nodeId : String?
+  var organizationsUrl : String?
+  var receivedEventsUrl : String?
+  var reposUrl : String?
+  var siteAdmin : Bool?
+  var starredUrl : String?
+  var subscriptionsUrl : String?
+  var type : String?
+  var url : String?
   
-  private enum CodingKeys: String, CodingKey {
-    case login
-    case id
-    case avatarURL = "avatar_url"
-    case htmlURL = "html_url"
-    case type
-    case siteAdmin = "site_admin"
+  init(codable: UserCodable) {
+      self.avatarUrl = codable.avatarUrl
+      self.eventsUrl = codable.eventsUrl
+      self.followersUrl = codable.followersUrl
+      self.followingUrl = codable.followingUrl
+      self.gistsUrl = codable.gistsUrl
+      self.gravatarId = codable.gravatarId
+      self.htmlUrl = codable.htmlUrl
+      self.id = codable.id
+      self.login = codable.login
+      self.nodeId = codable.nodeId
+      self.organizationsUrl = codable.organizationsUrl
+      self.receivedEventsUrl = codable.receivedEventsUrl
+      self.siteAdmin = codable.siteAdmin
+      self.starredUrl = codable.starredUrl
+      self.subscriptionsUrl = codable.subscriptionsUrl
+      self.type = codable.type
+      self.url = codable.url
   }
+    
 }
