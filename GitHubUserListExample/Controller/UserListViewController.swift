@@ -12,10 +12,12 @@ class UserListViewController: UIViewController {
 
     let loadingIndicator = LoadingViewController()
     let userViewModel = UserViewModel()
+    var page: Int = 1
     @IBOutlet weak var userList: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "GitHub Users"
         userViewModel.delegate = self
         userList.delegate = self
         userList.dataSource = self
@@ -24,7 +26,7 @@ class UserListViewController: UIViewController {
             self.showLoading()
         }
         
-        userViewModel.requestUserData()
+        userViewModel.requestUserData(page: page)
     }
     
     //MARK: - Loading Indicator
@@ -75,6 +77,15 @@ extension UserListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row == userViewModel.dataSource.count - 10 {
+            if self.userViewModel.dataSource.count < 100 {
+                self.page += 1
+                self.userViewModel.requestUserData(page: page)
+            }
+        }
     }
 }
 

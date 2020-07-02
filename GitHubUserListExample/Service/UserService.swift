@@ -15,8 +15,9 @@ class UserService: NSObject {
 
     static let instance = UserService()
     
-    func getUserList(completion: @escaping completionWithUsers,fail: @escaping completionWithError) {
-        let url = "/users?since=100"
+    func getUserList(since: Int, page: Int, completion: @escaping completionWithUsers,fail: @escaping completionWithError) {
+        let url = "/users?since=\(String(since))&per_page=20&page=\(String(page))"
+        
         ApiService.instance.get(url: url) { (result, error) in
             
             if case .failure = error {

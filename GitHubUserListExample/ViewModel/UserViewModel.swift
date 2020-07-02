@@ -20,11 +20,11 @@ class UserViewModel: NSObject {
     var delegate: UserViewModelDelegate?
     var dataSource = [User]()
     
-    func requestUserData() {
-        
-        UserService.instance.getUserList(completion: { (users) in
+    func requestUserData(page: Int) {
+
+        UserService.instance.getUserList(since: dataSource.last?.id ?? 0, page: page, completion: { (users) in
             
-            self.dataSource = users
+            self.dataSource.append(contentsOf: users)
             self.delegate?.updateView()
             
         }) { (errorMsg) in
@@ -33,7 +33,4 @@ class UserViewModel: NSObject {
             
         }
     }
-    
-    
-    
 }
