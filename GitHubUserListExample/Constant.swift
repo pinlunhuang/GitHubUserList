@@ -9,3 +9,4 @@
 import Foundation
 
 let api_url = "https://api.github.com"
+let SpecificUserSegue = "showSpecificUser"

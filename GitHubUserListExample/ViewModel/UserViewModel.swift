@@ -10,7 +10,8 @@ import UIKit
 
 protocol UserViewModelDelegate {
     
-    func updateView()
+    func updatedUserList()
+    func retrievedSpecificUser()
     func showAlert(msg:String)
     
 }
@@ -18,19 +19,35 @@ protocol UserViewModelDelegate {
 class UserViewModel: NSObject {
 
     var delegate: UserViewModelDelegate?
-    var dataSource = [User]()
+    var userList = [User]()
+    var specificUser: User?
+    
     
     func requestUserData(page: Int) {
 
-        UserService.instance.getUserList(since: dataSource.last?.id ?? 0, page: page, completion: { (users) in
+        UserService.instance.getUserList(since: userList.last?.id ?? 0, page: page, completion: { (users) in
             
-            self.dataSource.append(contentsOf: users)
-            self.delegate?.updateView()
+            self.userList.append(contentsOf: users)
+            self.delegate?.updatedUserList()
             
-        }) { (errorMsg) in
+        }) { (error) in
             
-            self.delegate?.showAlert(msg: errorMsg)
+            self.delegate?.showAlert(msg: error)
             
+        }
+    }
+    
+    func requestSpecificUser(username: String) {
+
+        UserService.instance.getSpecificUser(username: username, completion: {
+            (user) in
+            
+            self.specificUser = user
+            self.delegate?.retrievedSpecificUser()
+            
+        }) { (error) in
+            
+            self.delegate?.showAlert(msg: error)
         }
     }
 }

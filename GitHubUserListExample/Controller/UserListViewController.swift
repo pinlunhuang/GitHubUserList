@@ -13,20 +13,25 @@ class UserListViewController: UIViewController {
     let loadingIndicator = LoadingViewController()
     let userViewModel = UserViewModel()
     var page: Int = 1
-    @IBOutlet weak var userList: UITableView!
+    var clickedUserRow: Int = 0
+    @IBOutlet weak var userListTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = "GitHub Users"
         userViewModel.delegate = self
-        userList.delegate = self
-        userList.dataSource = self
+        userListTableView.delegate = self
+        userListTableView.dataSource = self
         
-        if userViewModel.dataSource.isEmpty {
+        if userViewModel.userList.isEmpty {
             self.showLoading()
         }
         
         userViewModel.requestUserData(page: page)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.title = "GitHub Users"
     }
     
     //MARK: - Loading Indicator
@@ -51,20 +56,33 @@ class UserListViewController: UIViewController {
         view.addSubview(loadingIndicator.view)
         loadingIndicator.didMove(toParent: self)
     }
+    
+    //MARK: - Segue Prepare
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == SpecificUserSegue {
+            let userDetailVC = segue.destination as! UserDetailViewController
+            userDetailVC.userName = self.userViewModel.userList[self.clickedUserRow].login
+        }
+    }
 }
 
 //MARK: - UserViewModelDelegate
 
 extension UserListViewController: UserViewModelDelegate {
-    func updateView() {
+    func retrievedSpecificUser() {
+        
+    }
+    
+    func updatedUserList() {
         DispatchQueue.main.async {
             self.removeLoading()
-            self.userList.reloadData()
+            self.userListTableView.reloadData()
         }
     }
     
     func showAlert(msg: String) {
-        
+        print(msg)
     }
 }
 
@@ -73,6 +91,8 @@ extension UserListViewController: UserViewModelDelegate {
 extension UserListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        self.clickedUserRow = indexPath.row
+        self.performSegue(withIdentifier: SpecificUserSegue, sender: self)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -80,8 +100,8 @@ extension UserListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == userViewModel.dataSource.count - 10 {
-            if self.userViewModel.dataSource.count < 100 {
+        if indexPath.row == userViewModel.userList.count - 10 {
+            if self.userViewModel.userList.count < 100 {
                 self.page += 1
                 self.userViewModel.requestUserData(page: page)
             }
@@ -93,12 +113,12 @@ extension UserListViewController: UITableViewDelegate {
 
 extension UserListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userViewModel.dataSource.count
+        return userViewModel.userList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell") as! UserCell
-        cell.configUser(user: userViewModel.dataSource[indexPath.row])
+        cell.configUser(user: userViewModel.userList[indexPath.row])
         return cell
     }
 }

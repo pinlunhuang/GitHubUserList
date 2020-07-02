@@ -20,17 +20,17 @@ enum NetworkError: Error {
 class ApiService: NSObject {
     static let instance = ApiService()
     
-    func get(url: String,completion: @escaping completionHandler) {
+    func get(url: String, completion: @escaping completionHandler) {
         
         let url = api_url + url
         let params: Parameters = [:]
 
         AF.request(url, parameters: params).responseJSON { (response) in
             guard let json = response.data else {
-                completion(nil,.failure)
+                completion(nil, .failure)
                 return
             }
-            completion(json,.success)
+            completion(json, .success)
         }
     }
 }

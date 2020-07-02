@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E456C3EA24ADAB81000484DA /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E456C3E924ADAB81000484DA /* UserDetailViewController.swift */; };
 		E4EFC55B24AC968D00B78D12 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC55A24AC968D00B78D12 /* AppDelegate.swift */; };
 		E4EFC55D24AC968D00B78D12 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC55C24AC968D00B78D12 /* SceneDelegate.swift */; };
 		E4EFC55F24AC968D00B78D12 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4EFC55E24AC968D00B78D12 /* UserListViewController.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E456C3E924ADAB81000484DA /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		E4EFC55724AC968D00B78D12 /* GitHubUserListExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubUserListExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4EFC55A24AC968D00B78D12 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4EFC55C24AC968D00B78D12 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,9 +86,9 @@
 				E4EFC57024AD74FC00B78D12 /* ViewModel */,
 				E4EFC56F24AD74E700B78D12 /* Controller */,
 				E4EFC56E24AD74C700B78D12 /* View */,
+				E4EFC58224AD831200B78D12 /* Constant.swift */,
 				E4EFC56324AC968E00B78D12 /* Assets.xcassets */,
 				E4EFC56824AC968E00B78D12 /* Info.plist */,
-				E4EFC58224AD831200B78D12 /* Constant.swift */,
 			);
 			path = GitHubUserListExample;
 			sourceTree = "<group>";
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				E4EFC55E24AC968D00B78D12 /* UserListViewController.swift */,
+				E456C3E924ADAB81000484DA /* UserDetailViewController.swift */,
 				E4EFC57524AD7C1B00B78D12 /* LoadingViewController.swift */,
 			);
 			path = Controller;
@@ -224,6 +227,7 @@
 			files = (
 				E4EFC57424AD75C600B78D12 /* UserCell.swift in Sources */,
 				E4EFC58124AD82CC00B78D12 /* APIService.swift in Sources */,
+				E456C3EA24ADAB81000484DA /* UserDetailViewController.swift in Sources */,
 				E4EFC55F24AC968D00B78D12 /* UserListViewController.swift in Sources */,
 				E4EFC58924AD859C00B78D12 /* UserCodable.swift in Sources */,
 				E4EFC58324AD831200B78D12 /* Constant.swift in Sources */,
